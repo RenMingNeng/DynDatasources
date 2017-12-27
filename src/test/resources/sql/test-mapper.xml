@@ -1,0 +1,25 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 等级Mapper -->
+<mapper namespace="com.omar.dao.TestEntityDao">
+    <!-- 保存 数据库 test 中的表 test -->
+    <insert id="saveTest" parameterType="com.omar.entity.TestEntity" useGeneratedKeys="true">
+    	INSERT INTO tb_test(
+			name
+    	)values(
+			#{name}
+    	)
+    </insert>
+    
+    <!-- 保存 数据库 test 中的表 test -->
+    <insert id="saveTest01" parameterType="com.omar.entity.TestEntityTwo" useGeneratedKeys="true">
+    	INSERT INTO tb_test_01(
+			name,
+			create_date
+    	)values(
+			#{name},
+			#{createDate}
+    	)
+    </insert>
+    
+</mapper>
